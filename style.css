@@ -7,8 +7,6 @@ body {
   margin: 0;
   box-sizing: border-box;
   background: #f2ebe3;
-  height: 100vh;
-  max-width: 100vw;
   font-family: 'Fraunces', sans-serif;
   font-size: 14px;
   color: #6c7289;
@@ -21,26 +19,23 @@ h1, h2, h3, h4, h5, h6, p {
 
 .main-page {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 95%;
+  min-height: 94vh;
 }
 
 .main-page > div {
   display: flex;
-  height: 450px;
   width: 600px;
-  padding: 0 150px;
 }
 
-.image-section .desktop-image {
+.desktop-image {
   height: 100%;
   width: 300px;
   border-radius: 10px 0 0 10px;
 }
 
-.image-section .mobile-image {
+.mobile-image {
   display: none;
 }
 
@@ -61,8 +56,14 @@ h1, h2, h3, h4, h5, h6, p {
   color: #1c232b;
 }
 
+.top-text {
+  letter-spacing: 4px;
+}
+
 .text-section > p {
   font-family: 'Montserrat', sans-serif;
+  line-height: 1.5;
+  font-weight: 500;
 }
 
 .text-section .price {
@@ -80,6 +81,10 @@ h1, h2, h3, h4, h5, h6, p {
   font-family: 'Fraunces', sans-serif;
 }
 
+.price span {
+  text-decoration: line-through;
+}
+
 .text-section > button {
   padding: 12px;
   color: #ffffff;
@@ -91,19 +96,16 @@ h1, h2, h3, h4, h5, h6, p {
   border: none;
 }
 
+.footer {
+  text-align: center;
+}
+
 @media screen and (max-width: 375px) {
-  body {
-    display: flex;
-    flex-direction: column;
-  }
   .main-page {
-    display: flex;
+    flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
-    max-height: 90vh;
   }
   .main-page > div {
-    display: flex;
     flex-direction: column;
     height: auto;
     width: auto;
@@ -127,6 +129,5 @@ h1, h2, h3, h4, h5, h6, p {
   .text-section {
     border-radius: 0 0 10px 10px;
   }
-
 }
 
